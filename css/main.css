@@ -1,1 +1,54 @@
+div {
+  display: block;
+}
 
+/* navbar style */
+nav {
+  width: 100%;
+  height: 85px;
+  position: fixed;
+  background-color: #e1f5fe;
+}
+
+nav .navtitle {
+  text-align: center;
+  line-height: 80px;
+  text-transform: uppercase;
+  font-family: 'Droid Sans', sans-serif;
+
+}
+
+nav .navtitle a {
+  font-size: 40px;
+  letter-spacing: 0.2em;
+  color: #263238;
+}
+
+nav .navmenu {
+  top: 35px;
+  right: 15px;
+  position: absolute;
+}
+
+nav .navmenu ul {
+  list-style-type: none;
+  padding-right: 22px;
+}
+
+nav .navmenu ul li {
+  display: inline;
+  font-size: 14px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+nav a {
+  color: #263238;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 15px;
+}
+
+/* title page */
+.titlepage {
+  padding-top: 85px;
+}
