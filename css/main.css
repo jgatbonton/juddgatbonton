@@ -7,13 +7,30 @@ div {
   display: block;
 }
 
+#animate-area	{
+	width: 560px;
+	height: 400px;
+	background-image: url(bg-clouds.png);
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+
+	animation: animatedBackground 40s linear infinite;
+}
+
 /* navbar style */
 nav {
   width: 100%;
   height: 85px;
   position: fixed;
   z-index: 100;
-  background-color: #e1f5fe;
+  background-color: #e3f2fd;
+}
+
+nav a {
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  text-decoration-style: initial !important;
+  text-decoration-color: initial !important;
 }
 
 nav .navtitle {
@@ -57,10 +74,17 @@ nav a {
 
 /* title page */
 .titlepage {
-  padding-top: 85px;
+  padding-top: 250px; /* used to be 85px */
+  height: 100%;
   background-color: #ffffff;
-  #eceff1
+  text-align: center;
   /* box shadow? */
+}
+/* intro */
+.intro {
+  padding-top: 160px;
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 45px;
 }
 
 /* about */
@@ -83,10 +107,254 @@ footer {
   padding-right: 20px;
   text-align: center;
   height: 100px;
-  background-color: #e1f5fe;
+  background-color: #e3f2fd;
 }
 
 footer .center {
   float: center;
   line-height: 80px;
+}
+
+/* https://codepen.io/eight/pen/LyrPXJ*/
+.loading {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  width: 100px;
+  height: 100px;
+}
+@-webkit-keyframes square-animation {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  10.5% {
+    left: 0;
+    top: 0;
+  }
+  12.5% {
+    left: 32px;
+    top: 0;
+  }
+  23% {
+    left: 32px;
+    top: 0;
+  }
+  25% {
+    left: 64px;
+    top: 0;
+  }
+  35.5% {
+    left: 64px;
+    top: 0;
+  }
+  37.5% {
+    left: 64px;
+    top: 32px;
+  }
+  48% {
+    left: 64px;
+    top: 32px;
+  }
+  50% {
+    left: 32px;
+    top: 32px;
+  }
+  60.5% {
+    left: 32px;
+    top: 32px;
+  }
+  62.5% {
+    left: 32px;
+    top: 64px;
+  }
+  73% {
+    left: 32px;
+    top: 64px;
+  }
+  75% {
+    left: 0;
+    top: 64px;
+  }
+  85.5% {
+    left: 0;
+    top: 64px;
+  }
+  87.5% {
+    left: 0;
+    top: 32px;
+  }
+  98% {
+    left: 0;
+    top: 32px;
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+@keyframes square-animation {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  10.5% {
+    left: 0;
+    top: 0;
+  }
+  12.5% {
+    left: 32px;
+    top: 0;
+  }
+  23% {
+    left: 32px;
+    top: 0;
+  }
+  25% {
+    left: 64px;
+    top: 0;
+  }
+  35.5% {
+    left: 64px;
+    top: 0;
+  }
+  37.5% {
+    left: 64px;
+    top: 32px;
+  }
+  48% {
+    left: 64px;
+    top: 32px;
+  }
+  50% {
+    left: 32px;
+    top: 32px;
+  }
+  60.5% {
+    left: 32px;
+    top: 32px;
+  }
+  62.5% {
+    left: 32px;
+    top: 64px;
+  }
+  73% {
+    left: 32px;
+    top: 64px;
+  }
+  75% {
+    left: 0;
+    top: 64px;
+  }
+  85.5% {
+    left: 0;
+    top: 64px;
+  }
+  87.5% {
+    left: 0;
+    top: 32px;
+  }
+  98% {
+    left: 0;
+    top: 32px;
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+@-webkit-keyframes hue-rotate {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+@keyframes hue-rotate {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loading {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-animation: hue-rotate 10s linear infinite both;
+          animation: hue-rotate 10s linear infinite both;
+}
+
+.loading__square {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  margin: 2px;
+  border-radius: 2px;
+  background: #07a;
+  background-image: -webkit-linear-gradient(45deg, #fa0 40%, #0c9 60%);
+  background-image: linear-gradient(45deg, #fa0 40%, #0c9 60%);
+  background-image: -moz-linear-gradient(#fa0, #fa0);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-animation: square-animation 10s ease-in-out infinite both;
+          animation: square-animation 10s ease-in-out infinite both;
+}
+.loading__square:nth-of-type(0) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.loading__square:nth-of-type(1) {
+  -webkit-animation-delay: -1.42857s;
+          animation-delay: -1.42857s;
+}
+.loading__square:nth-of-type(2) {
+  -webkit-animation-delay: -2.85714s;
+          animation-delay: -2.85714s;
+}
+.loading__square:nth-of-type(3) {
+  -webkit-animation-delay: -4.28571s;
+          animation-delay: -4.28571s;
+}
+.loading__square:nth-of-type(4) {
+  -webkit-animation-delay: -5.71429s;
+          animation-delay: -5.71429s;
+}
+.loading__square:nth-of-type(5) {
+  -webkit-animation-delay: -7.14286s;
+          animation-delay: -7.14286s;
+}
+.loading__square:nth-of-type(6) {
+  -webkit-animation-delay: -8.57143s;
+          animation-delay: -8.57143s;
+}
+.loading__square:nth-of-type(7) {
+  -webkit-animation-delay: -10s;
+          animation-delay: -10s;
 }
