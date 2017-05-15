@@ -18,7 +18,7 @@
 
 </head>
 
-<body>
+<body id="entirepage">
   <!-- Navigation Bar -->
   <nav>
     <div class="navtitle">
@@ -29,7 +29,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#resume">Resume</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+<!--          <li><a href="#contact">Contact</a></li> -->
           <li><a href="https://medium.com/@judd.gatbonton">Blog</a></li>
       </ul>
     </div>
@@ -60,24 +60,29 @@
 </nav>-->
 
   <div class="titlepage">
-    <h1>Hello! I'm Judd :) </h1>
+    <h1>Hello! I'm Judd. </h1>
     <h2> Developer + UX Designer </h2>
+    <hr>
+    <h1>Picture will go here!</h1>
   </div>
-
-  <img src="images/sfmoma.jpeg" width="450" height="300">
 
   <div class="about">
-    <p> Welcome to my website. I am studying Cognitive Science w/
-      Specialization in Human Computer Interaction and a minor in
-      Computer Science at UCSD. I love powerlifting, exploring,
-      Star Wars and building software applications that are both
-      aesthetically pleasing and easy to use.
-    </p>
-  </div>
+    <h3>About</h3>
+    <img class="sfpic" src="images/sfmoma.jpeg" width="450" height="300">
 
+    <div class="aboutpar">
+      <p> Welcome to my website. I am studying Cognitive Science w/
+        Specialization in Human Computer Interaction and a minor in
+        Computer Science at UCSD. I love powerlifting, exploring,
+        Star Wars and building software applications that are both
+        aesthetically pleasing and easy to use.
+      </p>
+    </div>
+  </div>
 
       <hr>
       <!-- education portion -->
+  <div class="resume">
       <h3> Education </h3>
       <h4> University of California, San Diego </h4>
 
@@ -86,7 +91,6 @@
           <li>Minor: Computer Science </li>
       </ul>
 
-      <hr>
       <!-- technical skills -->
       <h3>Technical Skills</h3>
 
@@ -111,7 +115,7 @@
         <li>Heroku</li>
         <li>Linux/UNIX</li>
       </ul>
-
+  </div>
       <hr>
       <!-- projects -->
       <h3>Projects</h3>
@@ -146,11 +150,10 @@
   </ul>
 
   <!-- footer -->
-  <div class="footer">
-    <div class="container">
-      <footer>&copy;Judd Gatbonton 2017<br /><a href="#">Back to top</a></footer>
-    </div>
-  </div>
+  <footer>
+    <p class="center">&copy;Judd Gatbonton 2017</p>
+    <!--<a href="#">Back to top</a>-->
+  </footer>
 
   <!-- script stuff -->
   <!-- Bootstrap script -->
