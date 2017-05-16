@@ -22,7 +22,7 @@
   <!-- Navigation Bar -->
   <nav>
     <div class="navtitle">
-      <a href="#">Judd&middot;X</a>
+      <a href="#titlepage">Judd&middot;X</a>
     </div>
     <div class="navmenu">
       <ul>
@@ -34,32 +34,8 @@
       </ul>
     </div>
   </nav>
-<!--  <nav class="navbar navbar-inverse navbar-default navbar-fixed-top">
-  <div class="container-fluid">-->
-    <!-- Logo -->
-<!--    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#firstpage">Explore SD</a>
-    </div> -->
 
-    <!-- Menu Items -->
-<!--    <div class="collapse navbar-collapse" id="mainNavBar">
-      <ul class="nav navbar-nav">
-          <li><a href="#about">About</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#blog">Blog</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>-->
-
-  <div class="titlepage">
+  <div id="titlepage">
     <div class='loading'>
       <div class='loading__square'></div>
       <div class='loading__square'></div>
@@ -69,14 +45,14 @@
       <div class='loading__square'></div>
       <div class='loading__square'></div>
     </div>
-    <div class="intro">
+    <div id="intro">
       <p>Hello! I'm Judd. </p>
       <p> Developer + UX Designer </p>
     </div>
 
   </div>
 
-  <div class="about">
+  <div id="about">
     <h3>About</h3>
     <img class="sfpic" src="images/sfmoma.jpeg" width="450" height="300">
 
@@ -92,7 +68,7 @@
 
       <hr>
       <!-- education portion -->
-  <div class="resume">
+  <div id="resume">
       <h3> Education </h3>
       <h4> University of California, San Diego </h4>
 
@@ -126,19 +102,21 @@
         <li>Linux/UNIX</li>
       </ul>
   </div>
-      <hr>
-      <!-- projects -->
-      <h3>Projects</h3>
-      <ol>
-        <li>Explore SD(Developer, UX Designer)</li>
-        <li>Uni (Android Developer, UX/UI Designer)</li>
-        <li>People Planner(Web Developer, UX/UI Designer)</li>
-        <li>juddx.com</li>
-      </ol>
-      <h3>Links</h3>
-      <ul>
-        <a href="http://peopleplanner.herokuapp.com">People Planner</a>
-      </ul>
+
+  <div id="projects">
+    <!-- projects -->
+    <h3>Projects</h3>
+    <ol>
+      <li>Explore SD(Developer, UX Designer)</li>
+      <li>Uni (Android Developer, UX/UI Designer)</li>
+      <li>People Planner(Web Developer, UX/UI Designer)</li>
+      <li>juddx.com</li>
+    </ol>
+    <h3>Links</h3>
+    <ul>
+      <a href="http://peopleplanner.herokuapp.com">People Planner</a>
+    </ul>
+  </div>
 
 
       <hr>
@@ -171,6 +149,45 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- smooth scrolling -->
+  <script>
+      // Select all links with hashes
+    $('a[href*="#"]')
+      // Remove links that don't actually link to anything
+      .not('[href="#"]')
+      .not('[href="#0"]')
+      .click(function(event) {
+        // On-page links
+        if (
+          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+          &&
+          location.hostname == this.hostname
+        ) {
+          // Figure out element to scroll to
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          // Does a scroll target exist?
+          if (target.length) {
+            // Only prevent default if animation is actually gonna happen
+            event.preventDefault();
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1000, function() {
+              // Callback after animation
+              // Must change focus!
+              var $target = $(target);
+              $target.focus();
+              if ($target.is(":focus")) { // Checking if the target was focused
+                return false;
+              } else {
+                $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                $target.focus(); // Set focus again
+              };
+            });
+          }
+        }
+      });
+  </script>
 
   <script src="js/index.js"></script>
 </body>

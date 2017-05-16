@@ -73,7 +73,7 @@ nav a {
 }
 
 /* title page */
-.titlepage {
+#titlepage {
   padding-top: 250px; /* used to be 85px */
   height: 100%;
   background-color: #ffffff;
@@ -81,7 +81,7 @@ nav a {
   /* box shadow? */
 }
 /* intro */
-.intro {
+#intro {
   padding-top: 160px;
   font-family: 'Droid Sans', sans-serif;
   font-size: 45px;
@@ -97,7 +97,7 @@ nav a {
 }
 
 /* resume */
-.resume {
+#resume {
   background-color: #ffffff;
 }
 
@@ -116,6 +116,8 @@ footer .center {
 }
 
 /* https://codepen.io/eight/pen/LyrPXJ*/
+/* maybe add city background to site?? */
+/* homepage css animation */
 .loading {
   position: absolute;
   top: 15%;
