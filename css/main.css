@@ -79,6 +79,7 @@ nav a {
   font-size: 15px;
 }
 
+
 /* title page */
 #titlepage {
   padding-top: 250px; /* used to be 85px */
@@ -103,10 +104,12 @@ nav a {
 .navspace {
   padding-top: 120px !important;
 }
+
+
 /* about */
 #about {
-  padding-top: 50px;
-  padding-bottom: 80px;
+  padding-top: 40px;
+  padding-bottom: 60px;
 }
 .aboutpar {
   font-family: 'Noto Sans', sans-serif;
@@ -125,7 +128,49 @@ nav a {
 /* resume */
 #resume {
   background-color: #ffffff;
+  padding-top: 75px;
+  padding-bottom: 40px;
+  font-family: 'Noto Sans', sans-serif;
 }
+
+.resume-title {
+  margin-bottom: 30px;
+  padding-bottom: 10px
+  border-bottom: 3px solid #263238;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(38,50,56);
+  margin-left: 10px;
+  margin-right: 20%;
+}
+
+.resume-margin {
+  margin-left: 20px;
+}
+#resume .right {
+  float: right;
+  font-style: italic;
+  margin-right: 25%;
+}
+
+.resume-education {
+  margin-bottom: 30px;
+}
+
+.resume-coursework {
+  margin-bottom: 40px;
+}
+
+#resume .resume-display {
+  display: flex;
+}
+#resume .skills-column {
+  width: 33.33%;
+}
+#resume .skills-list {
+  font-size: 18px;
+}
+
 
 /* contact */
 #contact {
