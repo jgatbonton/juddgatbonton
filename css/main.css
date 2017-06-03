@@ -83,7 +83,7 @@ nav a {
 /* title page */
 #titlepage {
   padding-top: 250px; /* used to be 85px */
-  height: 100%;
+  height: 625px;
   background-color: #ffffff;
   text-align: center;
   box-shadow: 4px 4px 4px rgba(120, 120, 120, 0.3);
@@ -91,7 +91,7 @@ nav a {
 
 /* intro */
 .intro {
-  padding-top: 160px;
+  padding-top: 80px;
   font-family: 'Droid Sans', sans-serif;
   font-size: 45px;
 }
