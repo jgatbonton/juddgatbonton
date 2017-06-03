@@ -195,7 +195,7 @@ nav a {
 }
 @media screen and (max-width: 568px) {
         .projects-title h1 {
-    font-size: 21px;
+    font-size: 23px;
     }
 }
 .project-img img{
@@ -308,9 +308,58 @@ nav a {
 	transform: scale(1);
 }
 
+.project-button {
+  font-family: 'Droid Sans', sans-serif;
+  color: #263238;
+}
+
+button {
+  outline: none;
+  height: 40px;
+  text-align: center;
+  width: 130px;
+  border-radius: 40px;
+  background: #fff;
+  border: 2px solid #263238;
+  color: #263238;
+  letter-spacing: 1px;
+  text-shadow: 0;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover {
+  color: white;
+  background: #263238;
+}
+
+
+
+
 /* contact */
 #contact {
   background-color: #ffffff;
+  padding-top: 65px;
+  padding-bottom: 40px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.contact-title {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 10px
+  border-bottom: 3px solid #263238;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(38,50,56);
+  margin-left: 40%;
+  margin-right: 40%;
+  font-family: 'Droid Sans', sans-serif;
+}
+@media screen and (max-width: 568px) {
+        .contact-title h1 {
+    font-size: 23px;
+    }
 }
 
 footer {
