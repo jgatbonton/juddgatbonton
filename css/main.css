@@ -136,7 +136,7 @@ nav a {
 
 .resume-title {
   margin-bottom: 30px;
-  padding-bottom: 10px
+
   border-bottom: 3px solid #263238;
   border-bottom-width: 3px;
   border-bottom-style: solid;
@@ -184,7 +184,7 @@ nav a {
 .projects-title {
   text-align: center;
   margin-bottom: 30px;
-  padding-bottom: 10px
+
   border-bottom: 3px solid #263238;
   border-bottom-width: 3px;
   border-bottom-style: solid;
@@ -339,7 +339,7 @@ button:hover {
 /* contact */
 #contact {
   background-color: #ffffff;
-  padding-top: 65px;
+  padding-top: 50px;
   padding-bottom: 40px;
   font-family: 'Noto Sans', sans-serif;
 }
@@ -347,7 +347,7 @@ button:hover {
 .contact-title {
   text-align: center;
   margin-bottom: 30px;
-  padding-bottom: 10px
+
   border-bottom: 3px solid #263238;
   border-bottom-width: 3px;
   border-bottom-style: solid;
@@ -361,6 +361,33 @@ button:hover {
     font-size: 23px;
     }
 }
+
+.contact-buttons {
+  text-align: center;
+  font-size: 4em;
+  color: #263238;
+  overflow: hidden;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+#mail {
+  color: #DC4B3E;
+}
+#twitter {
+  color: #00aced;
+}
+#linkedin {
+  color: #007bb6;
+}
+#github {
+  color: #24292E;
+}
+
+
+
 
 footer {
   padding-left: 20px;
